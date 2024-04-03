@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+  font-family: 'Roboto', sans-serif!important;
+}
+
+
+.navbar-sec {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+
+
+
+.container {
+  position: relative;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.poster-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.poster-col {
+
+  transition: transform 250ms ease-in-out;
+  padding: 15px 10px;
+}
+
+.poster-col:hover {
+  transform: scale(1.08);
+}
+
+::-webkit-scrollbar-track {
+  --webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: #F5F5F5;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #413e3e;
+}
+
+
+
+.banner-content {
+  max-width: 600px;
+}
+
+.banner-content p {
+  font-size: 14px;
+  margin: 1em 0 2em;
+  line-height: 2;
+}
+
+.banner-content button {
+  background: #000;
+  box-shadow: none;
+  color: white;
+  outline: none;
+  padding: 7px 25px;
+  border-radius: 40px;
+  border: none;
+  transition: transform 250ms ease-in-out;
+}
+
+.banner-content button:hover {
+  transform: scale(1.01);
+}
+
+.dark-shade {
+  background-image: linear-gradient(180deg,
+      transparent,
+      rgba(37, 37, 37, 0.61),
+      #111);
+}
+
+@media (max-width:766px) {
+  .poster-col {
+    flex: 0 0 500%;
+    max-width: 50%;
+  }
+
+  .dark-shade {
+    height: 3rem;
+  }
+
+  .banner-sec {
+    padding-top: 3.5em;
+  }
+  .logo {
+    max-height: 20px;
+  
+  }
+  .navbar-sec {
+    top:10px;
+    left: 15px;
+  }
+}
+
+@media (min-width:767px) and  (max-width:1022px) {
+  .poster-col {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .logo {
+    max-height: 30px;
+  }
+  .banner-sec {
+    padding-top: 5em;
+    padding-bottom: 3em;
+  }
+
+}
+@media (min-width:1023px) {
+  .poster-col {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
+  .logo {
+    max-height: 30px;
+  }
+
+  .dark-shade {
+    height: 7rem;
+  }
+
+  .banner-sec {
+    padding-top: 7em;
+    background-position: top;
+  }
+
+}
